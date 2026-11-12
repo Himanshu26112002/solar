@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface-variant": "#554336", "primary-fixed-dim": "#ffb77d", "on-error-container": "#93000a", "surface-bright": "#f8f9ff", "on-surface": "#0b1c30", "on-background": "#0b1c30", "outline": "#887364", "surface-container-low": "#eff4ff", "secondary-fixed": "#dae2fd", "on-primary-container": "#fffbff", "primary-fixed": "#ffdcc3", "surface-variant": "#d3e4fe", "error": "#ba1a1a", "on-secondary-fixed-variant": "#3f465c", "surface-tint": "#904d00", "inverse-on-surface": "#eaf1ff", "primary-container": "#b15f00", "secondary-fixed-dim": "#bec6e0", "on-tertiary-fixed": "#002113", "secondary-container": "#dae2fd", "surface-dim": "#cbdbf5", "inverse-primary": "#ffb77d", "inverse-surface": "#213145", "on-tertiary-fixed-variant": "#005236", "on-error": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-container": "#5c647a", "secondary": "#565e74", "tertiary-fixed": "#6ffbbe", "error-container": "#ffdad6", "background": "#f8f9ff", "tertiary": "#006c49", "tertiary-fixed-dim": "#4edea3", "on-tertiary": "#ffffff", "on-secondary-fixed": "#131b2e", "on-secondary": "#ffffff", "on-primary-fixed": "#2f1500", "surface": "#f8f9ff", "primary": "#8d4b00", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "surface-container-high": "#dce9ff", "outline-variant": "#dbc2b0", "tertiary-container": "#00a572", "on-primary-fixed-variant": "#6e3900", "surface-container": "#e5eeff", "on-tertiary-container": "#00311f" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.5rem", "margin": "1.25rem", "space-xl": "3rem", "gutter-desktop": "2rem", "margin-desktop": "3.5rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.75rem" }, "fontFamily": { "headline-md": [ "Space Grotesk" ], "headline-xl": [ "Space Grotesk" ], "display-hero-mobile": [ "Space Grotesk" ], "body-md": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Space Grotesk" ], "headline-sm": [ "Space Grotesk" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-lg": [ "Space Grotesk" ], "label-caps": [ "Inter" ], "metric-display": [ "Space Grotesk" ], "body-sm": [ "Plus Jakarta Sans" ], "display-hero": [ "Space Grotesk" ], "label-md": [ "Inter" ] }, "fontSize": { "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "headline-xl": [ "44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-hero-mobile": [ "38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-xl-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "500" } ], "label-caps": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "metric-display": [ "48px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "display-hero": [ "64px", { "lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "label-md": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center shadow-[0_12px_32px_-4px_rgba(217,119,6,0.12)]"><span class="material-symbols-outlined text-primary text-[24px]">wb_sunny</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">SURYA SOLAR</span><span class="block font-label-caps text-label-caps text-primary uppercase tracking-widest mt-1">Hanumangarh • Rajasthan</span></div></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary-container rounded-lg"><a aria-current="page" class="px-3 py-2 font-label-md transition-all bg-primary-container text-on-primary-container rounded-lg" data-path="home" href="#home">Home</a><a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pm-surya-ghar" href="#pm-surya-ghar">PM Surya Ghar (₹78k)</a><a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="solar-calculator" href="#solar-calculator">Solar Calculator</a><a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="services-products" href="#services-products">Services &amp; Products</a><a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="process" href="#process">Process</a><a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="projects" href="#projects">Projects</a></nav><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">call</span><span class="font-label-caps text-label-caps text-on-surface">+91 98290 XXXXX</span></div><a class="inline-flex items-center gap-space-xs px-4 py-2.5 rounded-lg bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-label-md text-label-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] transition-all" data-path="book-survey" href="#book-survey"><span class="material-symbols-outlined text-[16px] text-primary-fixed">calendar_month</span><span>Book Survey</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Aura -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-primary-fixed/40 via-surface-container-high/30 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- ========================================== -->
+<!-- SECTION 1: HERO SECTION (#home)            -->
+<!-- ========================================== -->
+<section class="relative max-w-7xl mx-auto px-6 lg:px-12 pt-12 pb-24 lg:pt-16 lg:pb-32" id="home">
+<!-- Sector Indicator Pills -->
+<div class="flex flex-wrap items-center gap-2 mb-8">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed/60 text-on-primary-fixed text-label-caps font-label-caps uppercase tracking-wider shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Rajasthan Solar Mission 2024-25
+        </span>
+<div class="hidden sm:flex items-center gap-1 text-label-caps font-label-caps text-on-surface-variant">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-on-surface-variant">Residential (1-10 kW)</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-on-surface-variant">Commercial</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-on-surface-variant">Ginning Mills</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-low text-on-surface-variant">KUSUM Tubewells</span>
+</div>
+</div>
+<!-- Main Asymmetric Hero Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Hero Text Column -->
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>JdVVNL Empanelled &amp; MNRE Channel Partner • ID: RAJ-HNM-4821</span>
+</div>
+<h1 class="font-display-hero text-display-hero-mobile lg:text-display-hero text-on-surface tracking-tight leading-[1.05]">
+            POWER YOUR <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-amber-600">FUTURE WITH</span> <br/>
+            THE SUN.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Your Rooftop. Your Power. Your Savings. High-efficiency photovoltaic engineering tailored for Hanumangarh homes, high-head canal tubewells, cotton ginning mills, and agro-enterprises across North Rajasthan.
+          </p>
+<!-- CTAs & Action Bar -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+<a class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container hover:from-primary-container hover:to-primary text-on-primary font-headline-sm text-headline-sm shadow-[0_16px_36px_-6px_rgba(217,119,6,0.35)] transition-all" href="#calculator">
+<span class="material-symbols-outlined text-[20px]">calculate</span>
+<span>Calculate Solar Savings</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-surface-container-lowest text-on-surface font-headline-sm text-headline-sm shadow-md hover:bg-surface-container transition-all" href="#contact">
+<span class="material-symbols-outlined text-[20px] text-primary">solar_power</span>
+<span>Book Free Site Survey</span>
+</a>
+</div>
+<!-- Trust Badges Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t-0">
+<div class="p-3 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="font-metric-display text-headline-md text-primary font-bold">₹78k</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-0.5">PM Surya Subsidy</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="font-metric-display text-headline-md text-on-surface font-bold">4.8 MW+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-0.5">District Capacity</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="font-metric-display text-headline-md text-tertiary font-bold">300+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-0.5">Sunny Days/Yr</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="font-metric-display text-headline-md text-on-surface font-bold">0 ₹</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-0.5">Net Meter Goal</div>
+</div>
+</div>
+</div>
+<!-- Hero Telemetry & Visual Sculptural Glass Panel -->
+<div class="lg:col-span-5 relative">
+<!-- Ambient Glow Pill Behind Card -->
+<div class="absolute -inset-2 bg-gradient-to-tr from-primary-fixed-dim/30 to-tertiary-fixed/30 rounded-3xl blur-2xl -z-10"></div>
+<!-- Telemetry Glass Box -->
+<div class="p-6 sm:p-7 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_20px_48px_-8px_rgba(245,158,11,0.16)] space-y-6">
+<!-- Header Bar -->
+<div class="flex items-center justify-between pb-4">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-tertiary animate-ping"></div>
+<div>
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider block">Live Node Array</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Hanumangarh Junction Hub</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary-container/30 text-on-tertiary-container text-label-caps font-semibold">99.4% Grid Offset</span>
+</div>
+<!-- Visual Photographic Accent -->
+<div class="relative h-44 w-full rounded-xl overflow-hidden shadow-inner group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Expansive rooftop solar array installed on a modern residence under radiant clear North Rajasthan sky in Hanumangarh, high-efficiency bifacial glass panels gleaming in bright morning sunlight with clean architectural perspective, crisp ultra-detailed photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ5La4gGjBJ7VFpUF0ZP7rXWrHADfM9RGb0xDiWJ01PVvxPgFEEPJZhFNLj9mxeHM0Zw-mA11RttX_ijk9V65-heCRw7xef8-j1qJpIveuwMULXn4TjlSaJco5RvxdIAW5lZ4tlq6WcVTXR410DxKKs7sCNE1rknuKn5g1FqMecQolLro56qrJcXgqoAhdNskpaWLQWCMbQEMf5fjn5xi3ReJ_cAuet5Yo0iCR6zM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-4">
+<div class="flex items-center justify-between w-full text-inverse-on-surface font-body-sm text-body-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary-fixed">wb_twilight</span> Irradiance: 842 W/m²</span>
+<span class="font-semibold text-primary-fixed-dim">Ambient: 34°C • DNI Peak</span>
+</div>
+</div>
+</div>
+<!-- Metrics Split -->
+<div class="grid grid-cols-2 gap-3">
+<div class="p-4 rounded-xl bg-surface-container-low">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Today's Generation</span>
+<span class="font-metric-display text-metric-display text-primary font-bold">24.2 <span class="text-headline-sm font-normal text-on-surface-variant">kWh</span></span>
+<span class="text-body-sm font-body-sm text-tertiary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +14% vs. JdVVNL Est.
+                </span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Instantaneous Yield</span>
+<span class="font-metric-display text-metric-display text-on-surface font-bold">5.8 <span class="text-headline-sm font-normal text-on-surface-variant">kWp</span></span>
+<span class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">bolt</span> Zero Export Limit: Inactive
+                </span>
+</div>
+</div>
+<!-- Energy Arc / Progress Visual -->
+<div class="p-4 rounded-xl bg-surface-container space-y-2">
+<div class="flex justify-between items-center text-label-caps font-label-caps text-on-surface">
+<span>DAILY SELF-CONSUMPTION STATUS</span>
+<span class="text-primary font-bold">94.8% DIRECT USE</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-primary to-tertiary transition-all duration-1000" style="width: 94.8%"></div>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface-variant pt-1">
+<span>Rooftop: 24.2 kWh</span>
+<span>Exported to Grid: 1.2 kWh</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- ========================================== -->
+<!-- SECTION 2: PM SURYA GHAR SUBSIDY HUB      -->
+<!-- ========================================== -->
+<section class="w-full bg-surface-container-low py-20 lg:py-28 relative" id="pm-surya-ghar">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Header -->
+<div class="max-w-3xl mb-16">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase mb-3">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+          Direct Benefit Transfer (DBT) Framework
+        </div>
+<h2 class="font-headline-xl text-headline-xl-mobile lg:text-headline-xl text-on-surface">
+          PM Surya Ghar: Muft Bijli Yojana — Up to ₹78,000 Direct Subsidy
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4">
+          Subsidies are credited directly into the homeowner's registered bank account post-inspection. Surya Solar manages 100% of JdVVNL net-meter sanctions, DISCOM liaison, feasibility permits, and portal synchronization.
+        </p>
+</div>
+<!-- 3 Tier Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop mb-12">
+<!-- Tier 01 -->
+<div class="relative rounded-2xl bg-surface-container-lowest p-8 shadow-sm flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-caps text-label-caps px-3 py-1 rounded-full bg-surface-container text-on-surface-variant uppercase font-semibold">Tier 01</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Compact Homes</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-semibold">1 kW System</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 mb-6">Designed for 1-2 BHK urban homes in Hanumangarh Town &amp; Rawatsar.</p>
+<div class="p-4 rounded-xl bg-surface-container mb-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Govt Direct Subsidy</span>
+<span class="font-headline-xl text-headline-lg text-primary font-bold">₹30,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Direct bank transfer via DBT</span>
+</div>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Roof Required: ~100 sq.ft shadow-free</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Generation: 4 to 5 Units / Day</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Suitable for Fans, Lights, Refrigerator</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Bi-directional meter installation included</span>
+</li>
+</ul>
+</div>
+<div class="pt-8">
+<a class="w-full block text-center py-3 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" href="#contact">
+              Claim 1 kW Subsidy
+            </a>
+</div>
+</div>
+<!-- Tier 02 (Featured) -->
+<div class="relative rounded-2xl bg-surface-container-lowest p-8 shadow-[0_20px_48px_-8px_rgba(245,158,11,0.18)] flex flex-col justify-between -mt-2 md:-mt-4">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider shadow-sm">
+            Most Popular in Hanumangarh
+          </div>
+<div>
+<div class="flex items-center justify-between mb-4 pt-2">
+<span class="font-label-caps text-label-caps px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed uppercase font-semibold">Tier 02</span>
+<span class="font-body-sm text-body-sm text-tertiary font-semibold">Zero-Bill Potential</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-semibold">2 kW System</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 mb-6">Optimized for standard families running 1.5-ton inverter ACs and water pumps.</p>
+<div class="p-4 rounded-xl bg-primary-fixed/40 mb-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Govt Direct Subsidy</span>
+<span class="font-headline-xl text-headline-lg text-primary font-bold">₹60,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Guaranteed central DBT approval</span>
+</div>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Roof Required: ~200 sq.ft shadow-free</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Generation: 8 to 10 Units / Day</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Eliminates standard ₹2,000–₹3,200/mo JdVVNL bills</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>540W DCR Monocrystalline Panels</span>
+</li>
+</ul>
+</div>
+<div class="pt-8">
+<a class="w-full block text-center py-3.5 px-4 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-md transition-colors" href="#contact">
+              Apply for 2 kW Subsidy
+            </a>
+</div>
+</div>
+<!-- Tier 03 (Max Benefit) -->
+<div class="relative rounded-2xl bg-surface-container-lowest p-8 shadow-sm flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-caps text-label-caps px-3 py-1 rounded-full bg-surface-container text-on-surface-variant uppercase font-semibold">Tier 03</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Villas &amp; Large Residences</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-semibold">3 kW to 10 kW</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 mb-6">For multi-story independent homes, multiple air conditioners, and deep tubewells.</p>
+<div class="p-4 rounded-xl bg-surface-container mb-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Govt Direct Subsidy</span>
+<span class="font-headline-xl text-headline-lg text-primary font-bold">₹78,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Maximum DBT ceiling under National Portal</span>
+</div>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Roof Required: 300 to 1,000+ sq.ft</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Generation: 12 to 45+ Units / Day</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Full heavy load operation (ACs, geysers, pumps)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Three-phase inverter compatibility</span>
+</li>
+</ul>
+</div>
+<div class="pt-8">
+<a class="w-full block text-center py-3 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" href="#contact">
+              Claim Max ₹78k Subsidy
+            </a>
+</div>
+</div>
+</div>
+<!-- Statutory Notice Banner -->
+<div class="p-6 rounded-2xl bg-surface-container flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[22px]">info</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Statutory Guidelines &amp; Commercial Tax Benefits</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Residential subsidies are governed under MNRE Direct Benefit Transfer regulations. Commercial &amp; Industrial consumers are eligible for 40% Accelerated Depreciation (AD) benefits under Section 32 of the Income Tax Act.
+            </p>
+</div>
+</div>
+<a class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-bright text-on-surface font-label-md text-label-md shadow-sm transition-all" href="https://pmsuryaghar.gov.in" rel="noopener noreferrer" target="_blank">
+<span>Official Portal (pmsuryaghar.gov.in)</span>
+<span class="material-symbols-outlined text-[16px] text-primary">open_in_new</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SECTION 3: SOLAR CALCULATOR & ROI ENGINE  -->
+<!-- ========================================== -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28" id="calculator">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest font-semibold block mb-2">North Rajasthan Insolation Model</span>
+<h2 class="font-headline-xl text-headline-xl-mobile lg:text-headline-xl text-on-surface">
+        Solar Yield &amp; ROI Precision Engine
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3">
+        Calibrated against Hanumangarh geo-coordinates (29.58° N, 74.32° E) with an average DNI of 5.6 kWh/m²/day and JdVVNL domestic/commercial tariff schedules.
+      </p>
+</div>
+<!-- Interactive Calculator Wrapper -->
+<div class="p-8 lg:p-12 rounded-3xl bg-surface-container-low shadow-[0_12px_32px_-4px_rgba(217,119,6,0.08)] grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+<!-- Input Controls Column -->
+<div class="lg:col-span-6 space-y-8">
+<!-- Sector Selector -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface uppercase mb-3 font-semibold">1. Select Tariff Category</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="calcSectorGroup">
+<button class="calc-sector-btn px-3 py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md text-center transition-all" data-rate="7.5" data-subsidy="true" type="button">Residential</button>
+<button class="calc-sector-btn px-3 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-all" data-rate="9.2" data-subsidy="false" type="button">Commercial</button>
+<button class="calc-sector-btn px-3 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-all" data-rate="9.8" data-subsidy="false" type="button">Ginning Mill</button>
+<button class="calc-sector-btn px-3 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-all" data-rate="6.5" data-subsidy="false" type="button">Agro KUSUM</button>
+</div>
+</div>
+<!-- Monthly Electricity Bill Slider -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<label class="font-label-caps text-label-caps text-on-surface uppercase font-semibold" for="billSlider">2. Monthly Electricity Bill (Avg)</label>
+<span class="font-headline-sm text-headline-sm text-primary font-bold" id="billValueDisplay">₹4,500 / mo</span>
+</div>
+<input class="w-full h-2 rounded-lg bg-surface-container-high appearance-none cursor-pointer accent-primary" id="billSlider" max="65000" min="1500" step="500" type="range" value="4500"/>
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>₹1,500</span>
+<span>₹30,000</span>
+<span>₹65,000+</span>
+</div>
+</div>
+<!-- Shadow-free Roof Area Slider -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<label class="font-label-caps text-label-caps text-on-surface uppercase font-semibold" for="roofSlider">3. Shadow-Free Roof / Land Area</label>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="roofValueDisplay">350 sq.ft</span>
+</div>
+<input class="w-full h-2 rounded-lg bg-surface-container-high appearance-none cursor-pointer accent-primary" id="roofSlider" max="5000" min="100" step="50" type="range" value="350"/>
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>100 sq.ft</span>
+<span>2,500 sq.ft</span>
+<span>5,000 sq.ft</span>
+</div>
+</div>
+<!-- DISCOM Selection Notice -->
+<div class="p-4 rounded-xl bg-surface-container-lowest flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">power</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            Calculated under <strong class="text-on-surface">Jodhpur Vidyut Vitran Nigam Ltd (JdVVNL)</strong> domestic slab including surcharge and cess rates applicable in Hanumangarh &amp; Ganganagar circles.
+          </div>
+</div>
+</div>
+<!-- Real-time Output Dashboard Column -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-sm flex flex-col justify-between space-y-6">
+<div>
+<div class="flex items-center justify-between border-b-0 pb-4">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-semibold">System Recommendation</span>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-label-caps font-bold">Optimal Feasibility</span>
+</div>
+<!-- Highlight Metric Blocks -->
+<div class="grid grid-cols-2 gap-4 my-6">
+<div class="p-4 rounded-xl bg-surface-container">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Recommended Capacity</span>
+<span class="font-headline-xl text-headline-lg text-primary font-bold" id="recCapacity">3.5 kWp</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1" id="recPanels">~7 Monocrystalline Panels</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Est. Payback Period</span>
+<span class="font-headline-xl text-headline-lg text-tertiary font-bold" id="recPayback">3.2 Years</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">21.8 yrs free electricity</span>
+</div>
+</div>
+<!-- Detailed Ledger Breakdown -->
+<div class="space-y-3 font-body-sm text-body-sm">
+<div class="flex justify-between py-1.5">
+<span class="text-on-surface-variant">Est. Monthly Generation</span>
+<span class="font-semibold text-on-surface" id="calcMonthlyGen">437 kWh / Units</span>
+</div>
+<div class="flex justify-between py-1.5">
+<span class="text-on-surface-variant">Year 1 Electricity Bill Savings</span>
+<span class="font-semibold text-on-surface" id="calcYearOne">₹39,375</span>
+</div>
+<div class="flex justify-between py-1.5">
+<span class="text-on-surface-variant">Central PM Surya Ghar Subsidy</span>
+<span class="font-semibold text-tertiary" id="calcSubsidyAmt">- ₹78,000</span>
+</div>
+<div class="flex justify-between py-1.5">
+<span class="text-on-surface-variant">Net Outlay (Post Subsidy)</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="calcNetOutlay">₹1,32,000</span>
+</div>
+</div>
+<!-- 25-Year Cumulative Savings Visual Bar -->
+<div class="mt-6 p-4 rounded-xl bg-surface-container-high/50">
+<div class="flex justify-between text-label-caps font-label-caps uppercase mb-2">
+<span class="text-on-surface-variant">25-Year Cumulative Savings</span>
+<span class="font-bold text-primary" id="calc25YearSavings">₹14.2 Lakhs+</span>
+</div>
+<div class="h-2.5 w-full bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="bg-primary h-full rounded-full" style="width: 78%"></div>
+</div>
+<div class="flex items-center gap-4 text-body-sm font-body-sm text-on-surface-variant mt-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary">forest</span> <span id="calcTrees">184</span> Trees Planted Eq.</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">eco</span> <span id="calcCo2">11.5</span> Tonnes CO₂ Offset</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-3 pt-4">
+<button class="flex-1 py-3 px-4 rounded-xl bg-tertiary hover:bg-tertiary-container text-on-tertiary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-sm transition-all" id="sendCalcWhatsapp" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Send Estimate to WhatsApp</span>
+</button>
+<a class="py-3 px-5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md text-center transition-colors" href="#contact">
+            Confirm Feasibility
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SECTION 4: SECTOR SOLUTIONS & PRODUCTS    -->
+<!-- ========================================== -->
+<section class="w-full bg-surface-container-low py-20 lg:py-28" id="services-products">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest font-semibold block mb-2">Comprehensive EPC Capabilities</span>
+<h2 class="font-headline-xl text-headline-xl-mobile lg:text-headline-xl text-on-surface">
+            Engineered for Every Roof &amp; Field in North Rajasthan
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Robust, dust-resilient, cyclone-grade galvanized mounting structures customized for Thar Desert wind forces and extreme seasonal heatwaves.
+        </p>
+</div>
+<!-- 6 Detailed Solution Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop">
+<!-- 1. Residential Rooftop Solar -->
+<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">home</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Residential Rooftop Solar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 mb-4">
+              Premium Tier-1 Bifacial N-Type TOPCon panels for villas and townhouses with 100% net-metering synchronization with JdVVNL.
+            </p>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>25-Year Linear Power Warranty</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>₹78,000 PM Surya Ghar Subsidy Assistance</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Zero-export smart inverter options</li>
+</ul>
+</div>
+<div class="pt-6">
+<a class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1 group-hover:gap-2 transition-all" href="#contact">
+<span>View Residential Plans</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- 2. Commercial Solar EPC -->
+<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">corporate_fare</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Commercial Solar EPC</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 mb-4">
+              Tailored setups for private hospitals, schools, shopping complexes, and cold-storage units cutting daytime tariff overheads by up to 80%.
+            </p>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>40% Accelerated Tax Depreciation</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>CapEx and RESCO financing models</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>3 to 3.5 years estimated payback</li>
+</ul>
+</div>
+<div class="pt-6">
+<a class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1 group-hover:gap-2 transition-all" href="#contact">
+<span>Commercial Audit</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- 3. Cotton Ginning & Industrial -->
+<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">factory</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Industrial &amp; Cotton Ginning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 mb-4">
+              High-Tension (HT) megawatt-class solar plants for RIICO Industrial Area Phase I &amp; II, cotton pressing mills, and oil expellers.
+            </p>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>100 kWp to 2.5 MWp turn-key plants</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Harmonic mitigation &amp; power factor tuning</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Custom sheet shed puncture-less mounting</li>
+</ul>
+</div>
+<div class="pt-6">
+<a class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1 group-hover:gap-2 transition-all" href="#contact">
+<span>Industrial Proposal</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- 4. Agro Solar Tubewells (PM-KUSUM) -->
+<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">agriculture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Agro Solar Tubewells (KUSUM)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 mb-4">
+              Empowering farmers across Pilibanga, Nohar, and Bhadra tehsils with solar VFD pump drives, ending reliance on erratic night rural feeder power.
+            </p>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>3 HP to 15 HP DC/AC submersibles</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>PM-KUSUM Component-B subsidy compliant</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Full daylight pressure for canal sprinklers</li>
+</ul>
+</div>
+<div class="pt-6">
+<a class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1 group-hover:gap-2 transition-all" href="#contact">
+<span>KUSUM Tubewell Specs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- 5. Hybrid & Off-Grid Storage -->
+<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed-dim/40 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">battery_charging_full</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Hybrid &amp; LiFePO4 Energy Storage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 mb-4">
+              Robust lithium battery storage for remote agricultural farmhouses, farmhouse villas, and clinics requiring 100% uninterrupted power.
+            </p>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>6,000+ cycle Lithium Ferro Phosphate cells</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Automatic grid-to-storage transfer (&lt;10ms)</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Zero maintenance modular expansion</li>
+</ul>
+</div>
+<div class="pt-6">
+<a class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1 group-hover:gap-2 transition-all" href="#contact">
+<span>Storage Solutions</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- 6. O&M & Desert Dust Cleansing -->
+<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-on-surface mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">cleaning_services</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">O&amp;M &amp; Desert Dust Cleaning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 mb-4">
+              Specialized dry-cleaning robotic brush and demineralized sprinkler modules engineered for Thar dust storms, restoring 18-24% soiled output.
+            </p>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Automated bi-weekly cleansing schedules</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>IV-curve tracing &amp; thermal drone scans</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Rapid 48-hr local inverter replacement</li>
+</ul>
+</div>
+<div class="pt-6">
+<a class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1 group-hover:gap-2 transition-all" href="#contact">
+<span>Book O&amp;M Service</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SECTION 5: 7-STEP COMMISSIONING LIFECYCLE  -->
+<!-- ========================================== -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28" id="process">
+<div class="max-w-3xl mb-16">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest font-semibold block mb-2">Zero Hassle Turnkey Process</span>
+<h2 class="font-headline-xl text-headline-xl-mobile lg:text-headline-xl text-on-surface">
+        7-Step Seamless Solar Commissioning
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-3">
+        From the initial JdVVNL sanction letter to your first net-meter credit, our engineering team manages the complete lifecycle with local Hanumangarh dispatch.
+      </p>
+</div>
+<!-- Timeline Container -->
+<div class="relative space-y-6">
+<!-- Step 01 -->
+<div class="p-6 sm:p-7 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:shadow-md transition-all">
+<div class="flex items-center gap-5">
+<span class="font-metric-display text-headline-lg text-primary font-bold shrink-0">01</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">12-Month Bill Audit &amp; Structural Consultation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Detailed analysis of previous JdVVNL electricity consumption spikes, peak summer AC load, and sanction feasibility.</p>
+</div>
+</div>
+<span class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-label-caps">Day 1</span>
+</div>
+<!-- Step 02 -->
+<div class="p-6 sm:p-7 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:shadow-md transition-all">
+<div class="flex items-center gap-5">
+<span class="font-metric-display text-headline-lg text-primary font-bold shrink-0">02</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Drone LiDAR &amp; Shadow Path Analysis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Laser precision 3D rooftop scanning identifying winter &amp; summer solar trajectory, parapet shadows, and wind drag.</p>
+</div>
+</div>
+<span class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-label-caps">Day 2 - 3</span>
+</div>
+<!-- Step 03 -->
+<div class="p-6 sm:p-7 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:shadow-md transition-all">
+<div class="flex items-center gap-5">
+<span class="font-metric-display text-headline-lg text-primary font-bold shrink-0">03</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">3D CAD Blueprint &amp; PVsyst Yield Report</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Custom engineering blueprints specifying string sizing, module layout, and projected kWh yields down to individual months.</p>
+</div>
+</div>
+<span class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-label-caps">Day 4 - 5</span>
+</div>
+<!-- Step 04 -->
+<div class="p-6 sm:p-7 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:shadow-md transition-all">
+<div class="flex items-center gap-5">
+<span class="font-metric-display text-headline-lg text-primary font-bold shrink-0">04</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">JdVVNL / DISCOM Bi-Directional Sanctions</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Submitting load enhancement applications, technical feasibility permits, and PM Surya Ghar portal vendor lock-in.</p>
+</div>
+</div>
+<span class="shrink-0 px-3.5 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps font-semibold">Handled 100% by Surya Solar</span>
+</div>
+<!-- Step 05 -->
+<div class="p-6 sm:p-7 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:shadow-md transition-all">
+<div class="flex items-center gap-5">
+<span class="font-metric-display text-headline-lg text-primary font-bold shrink-0">05</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tier-1 EPC Hardware Rigging &amp; Grounding</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Hot-dip galvanized (HDG 80 microns) structures erected, ALMM-approved DCR modules installed, and chemical earthing pitted.</p>
+</div>
+</div>
+<span class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-label-caps">Day 7 - 10</span>
+</div>
+<!-- Step 06 -->
+<div class="p-6 sm:p-7 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:shadow-md transition-all">
+<div class="flex items-center gap-5">
+<span class="font-metric-display text-headline-lg text-primary font-bold shrink-0">06</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Net Meter Installation &amp; DISCOM CEIG Testing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Joint inspection with JdVVNL sub-division junior engineer, meter calibration, megger ground check (&lt; 2 ohms), and live power feed.</p>
+</div>
+</div>
+<span class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-label-caps">Day 12 - 15</span>
+</div>
+<!-- Step 07 -->
+<div class="p-6 sm:p-7 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:shadow-md transition-all">
+<div class="flex items-center gap-5">
+<span class="font-metric-display text-headline-lg text-tertiary font-bold shrink-0">07</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Cloud Telemetry Activation &amp; DBT Subsidy Credit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Customer mobile app synchronized for 24/7 remote yield monitoring. Central ₹78,000 DBT credited directly to bank account within 30-45 days.</p>
+</div>
+</div>
+<span class="shrink-0 px-3.5 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-label-caps font-semibold">25-Yr Support</span>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SECTION 6: PROVEN LOCAL PORTFOLIO         -->
+<!-- ========================================== -->
+<section class="w-full bg-surface-container-low py-20 lg:py-28" id="projects">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest font-semibold block mb-2">Local Footprint</span>
+<h2 class="font-headline-xl text-headline-xl-mobile lg:text-headline-xl text-on-surface">
+            Proven Performance in Hanumangarh &amp; Sriganganagar
+          </h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="px-4 py-2 rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="block font-headline-sm text-headline-sm text-on-surface font-bold">650+</span>
+<span class="block font-label-caps text-label-caps text-on-surface-variant uppercase">Plants Running</span>
+</div>
+<div class="px-4 py-2 rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="block font-headline-sm text-headline-sm text-tertiary font-bold">99.8%</span>
+<span class="block font-label-caps text-label-caps text-on-surface-variant uppercase">Uptime Ratio</span>
+</div>
+</div>
+</div>
+<!-- Project Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop">
+<!-- Project A -->
+<div class="rounded-2xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="h-64 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Modern Indian luxury villa rooftop in Hanumangarh Junction with high-end solar array installation, clear afternoon skies, ultra-sharp architectural photography showing black framed solar panels on elevated galvanized pergola." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPvthH41na7f8KK9IDyFwpO5aPfrZA7448V1e5z5H79a9zan8egfV9FQaNEh5ZGwCY3B2VmyYw7iZwqMKcjrfaQLVPa3UtwHGEQOSQqMRLc9Qzt5M2l3HW5FlCY8apYYyhirL6hLAhWXr2DiHsFnLHFZlqA_UOR0u_7Rd8w5nUlUgu4yyympsIpD2WVP282c0bAIhPn-_8PCmJdmIqxlpqCRQbGgb3g8QIdaB6Th0"/>
+<div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md font-label-caps text-label-caps text-primary font-semibold shadow-sm">
+              Residential • Town Junction
+            </div>
+</div>
+<div class="p-6 sm:p-8 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Town Junction Premium Villa</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hanumangarh Junction Road</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">5 kW On-Grid</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Replaced an average ₹7,200 summer monthly bill with net-meter credits. Homeowner received full ₹78,000 DBT subsidy in bank account within 38 days of commissioning.
+            </p>
+<div class="grid grid-cols-3 gap-2 pt-4 border-t-0">
+<div class="p-2.5 rounded-lg bg-surface-container text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Monthly Saving</span>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">₹6,850</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Daily Yield</span>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">23.4 kWh</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">DBT Speed</span>
+<span class="font-headline-sm text-body-lg font-bold text-tertiary">38 Days</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project B -->
+<div class="rounded-2xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="h-64 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Industrial cotton pressing and ginning factory roof fitted with hundreds of high-capacity solar panels in Sangaria Rajasthan, aerial drone perspective with crisp sunlight highlighting heavy-duty installation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0dr5BZsVx1KR3Q8oMBCmr8dcSG0OaaKzA1lztaxrt-baS0LXVD24hnSvRVOx6dLFGHvfUBGN1h_EmI1VPyOzpeBTWjiShmVVkOq-p9K04EU_EHRucst_CYBYY01DT3zgH3dQsaYPjzsZLcSHxtkFDrt8Imbmd8HaNj5alIl1ZYi7doxqgXcT684_a0TZNXBfHxMek2TZIhagqxfnGkWGywnWNaPeXIKSMxJ0-_is"/>
+<div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md font-label-caps text-label-caps text-on-surface font-semibold shadow-sm">
+              Industrial EPC • Sangaria
+            </div>
+</div>
+<div class="p-6 sm:p-8 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Sangaria Cotton Ginning &amp; Pressing</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">RIICO Industrial Area, Sangaria</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">150 kWp HT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Engineered with specialized non-penetrating clamping on metal shed roofs. Slashed high-tension electricity overheads by ₹1,85,000 every month with a 2.6-year CapEx payback.
+            </p>
+<div class="grid grid-cols-3 gap-2 pt-4 border-t-0">
+<div class="p-2.5 rounded-lg bg-surface-container text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Monthly Saving</span>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">₹1.85 Lakhs</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Payback</span>
+<span class="font-headline-sm text-body-lg font-bold text-tertiary">2.6 Yrs</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Tax Benefit</span>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">40% AD</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project C -->
+<div class="rounded-2xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="h-64 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Agricultural farmland in Pilibanga Hanumangarh with solar powered tubewell pump gushing clean water into irrigation canal under warm bright sun, lush green wheat fields in background, documentary quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBPOeO4hLEXRXEcTVQWL3xxn_lIkGcAtLO9fsOVcZjOjB2c_8oYAzxNXU28Ci0mohaNsRLxuR9jJB5ecgN87kLwnDPSs5krb9z2VOtnes1LN-0_7TOPcXzhUl15g0yoye4iZB_WXJcRKCxiGMHyu9bPwLAetYSsiQywqPMoCOKA2-g2i_ukanB4Of3IQSrVz4o7tcf7pIC7h9RG6BFE-1E8YeYDhnWZxTZUpwcrEw"/>
+<div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md font-label-caps text-label-caps text-tertiary font-semibold shadow-sm">
+              PM-KUSUM • Pilibanga
+            </div>
+</div>
+<div class="p-6 sm:p-8 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Pilibanga Canal Farm Tubewell</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Indira Gandhi Canal Feeder Zone</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">7.5 HP VFD</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Replaced expensive diesel generator pumping and unpredictable 2 AM rural power roster with 100% daytime solar irrigation.
+            </p>
+<div class="grid grid-cols-3 gap-2 pt-4 border-t-0">
+<div class="p-2.5 rounded-lg bg-surface-container text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Diesel Saved</span>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">100% Zero</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Irrigation</span>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">8 Hrs Day</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Maintenance</span>
+<span class="font-headline-sm text-body-lg font-bold text-tertiary">Zero Lubes</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project D -->
+<div class="rounded-2xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="h-64 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Multistory modern hospital and healthcare facility in Hanumangarh with rooftop solar panels and clean architectural detailing under pristine Rajasthan sky, sunny editorial lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrhVf_j7yE4Vzb_SUp-ZGGyiA6a4ShU48LjKT_nc5RamfOucSRZYY4DGn0V7xcWA8tHhqr-nZuoDTzWW1f_fZ3N8ZtPFCgGNICdg0WwUhakErcyWfKZxxOTFnNay_hUCJjuUaHizMyyoQDRPQ-UVv12lM8Mx_UnVxMKR61MFxCKIZwrpAeJP6YHyCNmnLlkzxcKkk-YZFcrhGWcigeEKOHuhd_yKy0TwG18mWwTRg"/>
+<div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md font-label-caps text-label-caps text-primary font-semibold shadow-sm">
+              Healthcare EPC • Sector 12
+            </div>
+</div>
+<div class="p-6 sm:p-8 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Sector 12 Multispecialty Center</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hanumangarh Town Bypass</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">35 kW Hybrid</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Continuous solar power backup prioritizing critical medical equipment, pathology labs, and operation theatres with dual DG synchronization.
+            </p>
+<div class="grid grid-cols-3 gap-2 pt-4 border-t-0">
+<div class="p-2.5 rounded-lg bg-surface-container text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">DG Fuel Cut</span>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">65% Off</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Switch Speed</span>
+<span class="font-headline-sm text-body-lg font-bold text-tertiary">&lt; 10ms</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Annual Offset</span>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">42 Tonnes</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SECTION 7: CONSULTATION & BOOKING SURVEY   -->
+<!-- ========================================== -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28" id="contact">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- Left Column: Details & Office Hub -->
+<div class="lg:col-span-5 space-y-8">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest font-semibold block mb-2">Direct Field Engineering</span>
+<h2 class="font-headline-xl text-headline-xl-mobile lg:text-headline-xl text-on-surface">
+            Request Free Site Feasibility Survey
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4">
+            Our certified solar engineer visits your roof or field within 24 hours. We carry handheld drone scanners and shadow analyzers to map exact generation viability.
+          </p>
+</div>
+<!-- Contact Cards -->
+<div class="space-y-4">
+<div class="p-5 rounded-2xl bg-surface-container-low flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Central Depot &amp; Experience Hub</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Near Grain Market, Main Junction Road, Hanumangarh Junction, Rajasthan 335512
+              </p>
+</div>
+</div>
+<div class="p-5 rounded-2xl bg-surface-container-low flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-tertiary flex items-center justify-center text-on-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">headset_mic</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Direct Engineering Desk</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Call: +91 98290 XXXXX • Mon-Sat 9:00 AM - 7:30 PM
+              </p>
+</div>
+</div>
+<div class="p-5 rounded-2xl bg-surface-container-low flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center text-on-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Sub-Divisional Service Coverage</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Hanumangarh Town, Junction, Sangaria, Pilibanga, Nohar, Bhadra, Rawatsar, and Tibbi.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Luminous Booking Form -->
+<div class="lg:col-span-7 p-8 sm:p-10 rounded-3xl bg-surface-container-lowest shadow-[0_20px_48px_-8px_rgba(245,158,11,0.12)]">
+<form class="space-y-6" id="leadForm" onsubmit="event.preventDefault(); document.getElementById('formSuccessMsg').classList.remove('hidden');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface uppercase font-semibold mb-2" for="leadName">Full Name *</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-primary transition-all" id="leadName" placeholder="e.g. Surendra Choudhary" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface uppercase font-semibold mb-2" for="leadPhone">WhatsApp / Mobile *</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-primary transition-all" id="leadPhone" placeholder="e.g. 98290 12345" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface uppercase font-semibold mb-2" for="leadCategory">Installation Category *</label>
+<select class="w-full px-4 py-3 rounded-xl bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-primary transition-all" id="leadCategory">
+<option value="Residential (PM Surya Ghar ₹78k)">Residential (PM Surya Ghar ₹78k)</option>
+<option value="Commercial (Hospital/School/Shop)">Commercial (Hospital / School / Shop)</option>
+<option value="Industrial (Ginning / Rice Mill)">Industrial (Ginning / Rice Mill)</option>
+<option value="Agricultural Solar Pump (KUSUM)">Agricultural Solar Pump (KUSUM)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface uppercase font-semibold mb-2" for="leadTehsil">Tehsil / Area in Hanumangarh *</label>
+<select class="w-full px-4 py-3 rounded-xl bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-primary transition-all" id="leadTehsil">
+<option value="Hanumangarh Junction">Hanumangarh Junction</option>
+<option value="Hanumangarh Town">Hanumangarh Town</option>
+<option value="Sangaria">Sangaria</option>
+<option value="Pilibanga">Pilibanga</option>
+<option value="Rawatsar">Rawatsar</option>
+<option value="Nohar">Nohar</option>
+<option value="Bhadra">Bhadra</option>
+<option value="Tibbi">Tibbi</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface uppercase font-semibold mb-2" for="leadBill">Approx. Monthly Electric Bill</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-primary transition-all" id="leadBill" placeholder="e.g. ₹4,500 / month" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface uppercase font-semibold mb-2" for="leadDate">Preferred Survey Date</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-primary transition-all" id="leadDate" type="date"/>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface uppercase font-semibold mb-2" for="leadNotes">Roof or Farm Specifics (Optional)</label>
+<textarea class="w-full px-4 py-3 rounded-xl bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-primary transition-all" id="leadNotes" placeholder="Tell us if you have RCC flat roof, tin shed, 3-phase connection, or existing tubewell depth..." rows="3"></textarea>
+</div>
+<!-- Submission Alert -->
+<div class="hidden p-4 rounded-xl bg-tertiary-container/30 text-on-tertiary-container text-body-sm font-body-sm flex items-center gap-3" id="formSuccessMsg">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+<span>Survey request confirmed! Our Hanumangarh engineer will call you in 15 minutes to confirm the inspection slot.</span>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+<button class="flex-1 py-4 px-6 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm font-semibold shadow-md transition-all text-center" type="submit">
+              Book Free Site Visit
+            </button>
+<a class="py-4 px-6 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" href="https://wa.me/919829000000?text=Hello%20Surya%20Solar%20Hanumangarh,%20I%20would%20like%20to%20book%20a%20site%20survey." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-tertiary">chat</span>
+<span>Enquire on WhatsApp</span>
+</a>
+</div>
+</form>
+</div>
+</div>
+</section>
+</div>
+<!-- ========================================== -->
+<!-- CLIENT-SIDE INTERACTIVE BEHAVIOR SCRIPT    -->
+<!-- ========================================== -->
+<script>
+  (function initSuryaSolarEngine() {
+    // Calculator elements
+    const billSlider = document.getElementById('billSlider');
+    const roofSlider = document.getElementById('roofSlider');
+    const billValueDisplay = document.getElementById('billValueDisplay');
+    const roofValueDisplay = document.getElementById('roofValueDisplay');
+    const recCapacity = document.getElementById('recCapacity');
+    const recPanels = document.getElementById('recPanels');
+    const recPayback = document.getElementById('recPayback');
+    const calcMonthlyGen = document.getElementById('calcMonthlyGen');
+    const calcYearOne = document.getElementById('calcYearOne');
+    const calcSubsidyAmt = document.getElementById('calcSubsidyAmt');
+    const calcNetOutlay = document.getElementById('calcNetOutlay');
+    const calc25YearSavings = document.getElementById('calc25YearSavings');
+    const calcTrees = document.getElementById('calcTrees');
+    const calcCo2 = document.getElementById('calcCo2');
+    const sendCalcWhatsapp = document.getElementById('sendCalcWhatsapp');
+    const sectorBtns = document.querySelectorAll('.calc-sector-btn');
+
+    let currentTariff = 7.5; // JdVVNL domestic
+    let allowsSubsidy = true;
+
+    function formatINR(val) {
+      return '₹' + Math.round(val).toLocaleString('en-IN');
+    }
+
+    function calculateSolar() {
+      if (!billSlider || !roofSlider) return;
+      const bill = parseFloat(billSlider.value);
+      const roof = parseFloat(roofSlider.value);
+
+      billValueDisplay.textContent = formatINR(bill) + ' / mo';
+      roofValueDisplay.textContent = roof.toLocaleString('en-IN') + ' sq.ft';
+
+      // Monthly consumption in kWh approx
+      const monthlyUnits = bill / currentTariff;
+      
+      // Hanumangarh generates ~125 kWh per kWp installed monthly (4.17 units/day/kW average year round)
+      let neededKw = monthlyUnits / 125;
+      
+      // Roof limitation: ~100 sq ft per kWp
+      const maxKwByRoof = roof / 90;
+      let effectiveKw = Math.min(neededKw, maxKwByRoof);
+      
+      // Floor and ceil constraints
+      if (effectiveKw < 1) effectiveKw = 1;
+      effectiveKw = Math.round(effectiveKw * 10) / 10;
+
+      // Subsidy logic (PM Surya Ghar: 1 kW = 30k, 2 kW = 60k, >=3 kW = 78k max)
+      let subsidy = 0;
+      if (allowsSubsidy) {
+        if (effectiveKw >= 3) {
+          subsidy = 78000;
+        } else if (effectiveKw >= 2) {
+          subsidy = 60000;
+        } else if (effectiveKw >= 1) {
+          subsidy = 30000;
+        }
+      }
+
+      // Cost estimation based on market rates (~₹60,000 per kWp for tier-1 DCR mono bifacial)
+      const basePlantCost = effectiveKw * 60000;
+      const netOutlay = Math.max(basePlantCost - subsidy, 15000);
+
+      // Generation & Savings
+      const monthlyGen = effectiveKw * 125;
+      const yearOneSavings = monthlyGen * 12 * currentTariff;
+      const paybackYears = Math.round((netOutlay / yearOneSavings) * 10) / 10;
+      const savings25 = (yearOneSavings * 25) - netOutlay;
+
+      // Eco metrics
+      const treesEq = Math.round(effectiveKw * 52);
+      const co2Offset = Math.round((effectiveKw * 3.3) * 10) / 10;
+
+      // Update UI
+      recCapacity.textContent = effectiveKw + ' kWp';
+      recPanels.textContent = '~' + Math.ceil(effectiveKw / 0.54) + ' Bi-facial Panels';
+      recPayback.textContent = Math.max(paybackYears, 2.1) + ' Years';
+      calcMonthlyGen.textContent = Math.round(monthlyGen) + ' kWh / Units';
+      calcYearOne.textContent = formatINR(yearOneSavings);
+      calcSubsidyAmt.textContent = allowsSubsidy ? '- ' + formatINR(subsidy) : 'N/A (40% Dep. Applies)';
+      calcNetOutlay.textContent = formatINR(netOutlay);
+      calc25YearSavings.textContent = formatINR(Math.max(savings25, 100000)) + '+';
+      calcTrees.textContent = treesEq;
+      calcCo2.textContent = co2Offset;
+    }
+
+    if (billSlider && roofSlider) {
+      billSlider.addEventListener('input', calculateSolar);
+      roofSlider.addEventListener('input', calculateSolar);
+    }
+
+    sectorBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        sectorBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+        });
+        this.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+        this.classList.add('bg-primary', 'text-on-primary');
+        currentTariff = parseFloat(this.getAttribute('data-rate'));
+        allowsSubsidy = this.getAttribute('data-subsidy') === 'true';
+        calculateSolar();
+      });
+    });
+
+    if (sendCalcWhatsapp) {
+      sendCalcWhatsapp.addEventListener('click', function() {
+        const kw = recCapacity ? recCapacity.textContent : '3.5 kWp';
+        const bill = billSlider ? billSlider.value : '4500';
+        const msg = encodeURIComponent('Hello Surya Solar Hanumangarh! I calculated a ' + kw + ' system for my monthly bill of ₹' + bill + '. Please share feasibility and installation details.');
+        window.open('https://wa.me/919829000000?text=' + msg, '_blank');
+      });
+    }
+
+    // Run initial compute
+    calculateSolar();
+  })();
+</script></main><aside aria-label="Quick Actions" class="fixed bottom-6 right-6 z-40 flex flex-col gap-space-sm"><a class="flex items-center gap-space-sm px-4 py-3 rounded-full bg-tertiary-container hover:bg-tertiary text-on-tertiary-container hover:text-on-tertiary shadow-[0_12px_32px_-4px_rgba(217,119,6,0.16)] transition-all backdrop-blur-md" href="https://wa.me/919829000000" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">chat</span><span class="hidden sm:inline font-label-md text-label-md font-semibold">WhatsApp Us</span></a><a class="flex items-center gap-space-sm px-4 py-3 rounded-full bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary shadow-[0_20px_48px_-8px_rgba(245,158,11,0.2)] transition-all" href="tel:+919829000000"><span class="material-symbols-outlined text-[20px]">phone_in_talk</span><span class="hidden sm:inline font-label-md text-label-md font-semibold">Call Hanumangarh Hub</span></a></aside><footer class="w-full bg-surface-container-low text-on-surface-variant"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop mb-space-xl"><div class="space-y-space-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">wb_sunny</span></div><span class="font-headline-sm text-headline-sm text-on-surface">SURYA SOLAR</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Empowering North Rajasthan with premier tier-1 photovoltaic engineering, automated subsidy handholding, and architectural-grade solar plants across Hanumangarh &amp; Ganganagar belt.</p><div class="flex flex-wrap gap-2 pt-space-xs"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-tertiary font-label-caps text-label-caps font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>MNRE Empanelled</span><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-caps text-label-caps font-semibold">JdVVNL Registered</span></div></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Solar Architecture</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#pm-surya-ghar">PM Surya Ghar Yojana (₹78,000 Subsidy)</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#services-products">On-Grid Rooftop Systems</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#services-products">Commercial &amp; Agro Solar</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#services-products">DCR Bifacial Glass-to-Glass Panels</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#solar-calculator">Net-Metering ROI Calculator</a></li></ul></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Regional Office</h4><address class="not-italic font-body-sm text-body-sm space-y-space-xs"><div class="flex items-start gap-2"><span class="material-symbols-outlined text-[18px] text-primary mt-0.5">location_on</span><span>Near Grain Market, Junction Road, Hanumangarh Junction, Rajasthan 335512</span></div><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-primary">phone</span><span>Direct: +91 98290 XXXXX</span></div><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-primary">mail</span><span>contact@suryasolarhmh.in</span></div><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-primary">schedule</span><span>Mon - Sat: 9:00 AM - 7:30 PM</span></div></address></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Discom &amp; Grid Liaison</h4><p class="font-body-sm text-body-sm mb-space-sm">Seamless end-to-end solar net-meter inspection, DISCOM NOC clearance, and direct DBT subsidy credit assistance for Hanumangarh Town &amp; Junction.</p><div class="p-space-sm rounded-xl bg-surface-container"><span class="block font-label-caps text-label-caps text-primary uppercase">Official Assistance</span><span class="block font-body-sm text-body-sm text-on-surface mt-1">Authorized JdVVNL Net Metering Workflow Partner</span></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm"><p>© 2024 Surya Solar Engineering (Hanumangarh). All rights reserved.</p><div class="flex items-center gap-space-md"><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#terms">Terms of Service</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#privacy">Privacy Policy</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#subsidy-guidelines">PM Surya Ghar Norms</a></div></div></div></footer></body></html>
