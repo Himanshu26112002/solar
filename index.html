@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Surya Solar Hanumangarh | Sunlit Emerald Demo</title>
+  <title>Surya Solar Hanumangarh | Solar Horizon Demo</title>
 
   <!-- Google Fonts: Space Grotesk & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +30,7 @@
           boxShadow: {
             'emerald-glow': '0 14px 36px -10px rgba(5, 150, 105, 0.35)',
             'amber-glow': '0 14px 36px -10px rgba(245, 158, 11, 0.35)',
-            'card': '0 14px 36px -14px rgba(7, 30, 29, 0.10)'
+            'card': '0 14px 36px -14px rgba(7, 30, 29, 0.12)'
           }
         }
       }
@@ -38,15 +38,14 @@
   </script>
 
   <!-- Three.js UMD -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.147.0/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
 
   <style>
     body { background-color: #FFFFFF; color: #0B2524; overflow-x: hidden; }
     .hero-sunlit-bg {
       background:
-        radial-gradient(circle at 78% 42%, rgba(5, 150, 105, 0.09) 0%, transparent 45%),
-        radial-gradient(circle at 18% 18%, rgba(245, 158, 11, 0.10) 0%, transparent 42%),
-        linear-gradient(135deg, #FFFFFF 0%, #F2FAF6 55%, #FFFBEB 100%);
+        radial-gradient(circle at 76% 48%, rgba(14, 165, 233, 0.08) 0%, rgba(16, 185, 129, 0.08) 38%, transparent 66%),
+        linear-gradient(125deg, #FFFFFF 0%, #F4FBF7 55%, #ECFDF5 100%);
     }
     .bg-tech-grid {
       background-image:
@@ -54,6 +53,30 @@
         linear-gradient(to bottom, rgba(167, 243, 208, 0.06) 1px, transparent 1px);
       background-size: 48px 48px;
     }
+
+    @keyframes slowEarthFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    .earth-photo-motion { animation: slowEarthFloat 10s ease-in-out infinite; }
+
+    /* 3D FLIP CARDS */
+    .flip-card { perspective: 1200px; height: 390px; }
+    .flip-card-inner {
+      position: relative; width: 100%; height: 100%;
+      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      transform-style: preserve-3d;
+    }
+    @media (hover: hover) {
+      .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+    }
+    .flip-card.is-flipped .flip-card-inner { transform: rotateY(180deg); }
+    .flip-card-front, .flip-card-back {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      -webkit-backface-visibility: hidden; backface-visibility: hidden;
+    }
+    .flip-card-back { transform: rotateY(180deg); }
+
     @keyframes energyPulse {
       0%, 100% { opacity: 0.72; transform: translateY(0px); }
       50% { opacity: 1; transform: translateY(-2px); }
@@ -61,14 +84,15 @@
     .pulse-node { animation: energyPulse 2.4s ease-in-out infinite; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .pulse-node { animation: none !important; }
+      .pulse-node, .earth-photo-motion { animation: none !important; }
+      .flip-card-inner { transition: none !important; }
     }
   </style>
 </head>
 <body class="font-sans antialiased">
 
-  <!-- LIGHT EDITORIAL NAVBAR -->
-  <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300 py-4 bg-white/80 backdrop-blur-md border-b border-emerald-900/5">
+  <!-- NAVBAR -->
+  <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300 py-4 bg-white/85 backdrop-blur-md border-b border-emerald-900/5">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
       <a href="#hero" class="flex items-center gap-2.5">
         <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-emeraldBrand text-white shadow-emerald-glow">
@@ -116,15 +140,13 @@
     </div>
   </header>
 
-  <!-- 1. HERO SECTION — SUNLIT DAYLIGHT THEME + REAL PHOTOREALISTIC 3D EARTH -->
-  <section id="hero" class="hero-sunlit-bg relative min-h-screen overflow-hidden pt-28 pb-16 lg:flex lg:items-center">
-    <!-- Subtle concentric architectural orbit rings behind Earth -->
-    <div aria-hidden="true" class="pointer-events-none absolute right-[-12%] top-1/2 hidden h-[760px] w-[760px] -translate-y-1/2 rounded-full border border-emerald-500/15 lg:block"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute right-[-6%] top-1/2 hidden h-[600px] w-[600px] -translate-y-1/2 rounded-full border border-amber-500/15 lg:block"></div>
+  <!-- 1. HERO SECTION — PHOTOREALISTIC NASA SATELLITE 3D EARTH -->
+  <section id="hero" class="hero-sunlit-bg relative min-h-screen overflow-hidden pt-24 pb-16 lg:flex lg:items-center">
+    <div aria-hidden="true" class="pointer-events-none absolute right-[-14%] top-1/2 hidden h-[840px] w-[840px] -translate-y-1/2 rounded-full border border-emerald-500/20 lg:block"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute right-[-7%] top-1/2 hidden h-[680px] w-[680px] -translate-y-1/2 rounded-full border border-emerald-500/15 lg:block"></div>
 
-    <div class="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
-      <!-- Left Content -->
-      <div class="lg:col-span-6">
+    <div class="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+      <div class="z-10 lg:col-span-6">
         <div class="inline-flex items-center gap-2 rounded-full border border-emerald-700/20 bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-emeraldBrand shadow-sm">
           <span class="h-2 w-2 rounded-full bg-amberBrand animate-pulse"></span>
           Powering Hanumangarh, Rajasthan
@@ -151,7 +173,6 @@
           </a>
         </div>
 
-        <!-- Floating Clean Segment Cards -->
         <div class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
           <a href="#residential" class="group rounded-2xl border border-emerald-900/10 bg-white/90 p-3.5 shadow-sm backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-emeraldBrand">
             <span class="block text-[10px] font-bold uppercase tracking-wider text-emeraldBrand">Home</span>
@@ -172,18 +193,18 @@
         </div>
       </div>
 
-      <!-- Right Content: REAL Photorealistic 3D Earth + Solar Panels -->
+      <!-- Right: Photorealistic NASA Satellite 3D Earth + Solar Panels -->
       <div class="relative lg:col-span-6 lg:-mr-12">
-        <div id="heroEarthContainer" class="h-[360px] w-full cursor-grab active:cursor-grabbing sm:h-[500px] lg:h-[600px]" aria-label="Interactive photorealistic 3D Earth equipped with solar panels"></div>
-        <div class="pointer-events-none mx-auto mt-2 max-w-xs rounded-2xl border border-emerald-900/10 bg-white/90 px-4 py-2.5 text-center shadow-card backdrop-blur-md lg:absolute lg:bottom-6 lg:left-8 lg:text-left">
-          <p class="text-[11px] font-bold uppercase tracking-widest text-emeraldBrand">Live 3D Earth • Drag to Spin</p>
-          <p class="text-xs text-ink-muted">Satellite globe with real ocean reflections, cloud layer & solar arrays.</p>
+        <div id="heroEarthContainer" class="h-[380px] w-full cursor-grab active:cursor-grabbing sm:h-[520px] lg:h-[630px]" aria-label="Photorealistic rotating 3D Earth with solar panels"></div>
+        <div class="pointer-events-none mx-auto mt-2 max-w-xs rounded-2xl border border-emerald-900/10 bg-white/90 px-4 py-2.5 text-center shadow-card backdrop-blur-md lg:absolute lg:bottom-6 lg:left-6 lg:text-left">
+          <p class="text-[11px] font-bold uppercase tracking-widest text-emeraldBrand">NASA Satellite 3D Earth • Drag to Spin</p>
+          <p class="text-xs text-ink-muted">Real topographic relief, drifting clouds, ocean reflections & solar arrays.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 2. PM SURYA GHAR SUBSIDY SECTION (Warm Amber + Deep Forest Card Contrast) -->
+  <!-- 2. PM SURYA GHAR SUBSIDY SECTION -->
   <section id="subsidy" class="bg-forest py-20 text-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid items-center gap-12 lg:grid-cols-12">
@@ -263,7 +284,7 @@
     </div>
   </section>
 
-  <!-- 4. COMPLETE SOLAR SERVICES CATALOGUE + POPUP MODAL -->
+  <!-- 4. COMPLETE SOLAR SERVICES CATALOGUE — PICTURE + 3D FLIP CARDS -->
   <section id="services" class="bg-white py-20 text-ink-dark">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
@@ -271,7 +292,7 @@
           <span class="text-xs font-bold uppercase tracking-widest text-emeraldBrand">Complete Solar Engineering</span>
           <h2 class="mt-2 font-display text-3xl font-bold sm:text-4xl">Solar Solutions Catalogue</h2>
           <p class="mt-2 max-w-2xl text-sm text-ink-muted sm:text-base">
-            Click any service to inspect applications, configurations, and technical requirements.
+            Hover or tap any card to flip for specifications, benefits, and direct quotation requests.
           </p>
         </div>
         <div id="serviceFilterTabs" class="flex flex-wrap gap-2"></div>
@@ -371,7 +392,7 @@
     </div>
   </section>
 
-  <!-- 7. INDUSTRIAL SOLAR (Deep Forest-Obsidian Engineering Band + Dedicated Form) -->
+  <!-- 7. INDUSTRIAL SOLAR -->
   <section id="industrial" class="relative overflow-hidden bg-forest py-24 text-white">
     <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-tech-grid opacity-80"></div>
     <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -583,7 +604,7 @@
     </div>
   </section>
 
-  <!-- 11. 7-STEP INSTALLATION TIMELINE & WHY CHOOSE US -->
+  <!-- 11. 7-STEP INSTALLATION TIMELINE -->
   <section class="bg-sand-mint py-20 text-ink-dark">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center">
@@ -691,16 +712,16 @@
     </div>
   </footer>
 
-  <!-- FLOATING QUICK ACTIONS -->
-  <div class="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-2.5">
-    <a href="#calculator" aria-label="Calculate Solar Savings" class="flex h-11 items-center gap-2 rounded-full border border-emerald-900/15 bg-white px-4 text-xs font-bold text-ink-dark shadow-lg transition hover:scale-105">
-      Savings Calculator
+  <!-- COMPACT FLOATING QUICK ACTIONS -->
+  <div class="fixed bottom-4 right-4 z-40 flex flex-col items-end gap-2">
+    <a href="#calculator" aria-label="Calculate Solar Savings" title="Calculate Solar Savings" class="flex h-10 items-center gap-1.5 rounded-full border border-emerald-900/15 bg-white/95 px-3.5 text-xs font-bold text-ink-dark shadow-lg backdrop-blur-sm transition hover:scale-105">
+      Calculator
     </a>
-    <a id="floatCall" href="tel:+919829000000" aria-label="Call Surya Solar" class="flex h-11 items-center gap-2 rounded-full bg-forest px-4 text-xs font-bold text-white shadow-lg transition hover:scale-105">
-      Call Surya Solar
+    <a id="floatCall" href="tel:+919829000000" aria-label="Call Surya Solar" title="Call Surya Solar" class="flex h-10 items-center gap-1.5 rounded-full bg-forest px-3.5 text-xs font-bold text-white shadow-lg transition hover:scale-105">
+      Call Us
     </a>
-    <a id="floatWhatsApp" href="https://wa.me/919829000000?text=Hello%20Surya%20Solar%20Hanumangarh%2C%20I%20would%20like%20a%20solar%20consultation." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Consultation" class="flex h-12 items-center gap-2 rounded-full bg-emeraldBrand px-5 text-xs font-bold text-white shadow-emerald-glow transition hover:scale-105 hover:bg-emeraldBrand-dark">
-      WhatsApp Consultation
+    <a id="floatWhatsApp" href="https://wa.me/919829000000?text=Hello%20Surya%20Solar%20Hanumangarh%2C%20I%20would%20like%20a%20solar%20consultation." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Consultation" title="WhatsApp Consultation" class="flex h-11 items-center gap-1.5 rounded-full bg-emeraldBrand px-4 text-xs font-bold text-white shadow-emerald-glow transition hover:scale-105 hover:bg-emeraldBrand-dark">
+      WhatsApp
     </a>
   </div>
 
@@ -714,6 +735,7 @@
         </div>
         <button onclick="closeServiceModal()" class="rounded-lg bg-sand px-3 py-1.5 text-sm font-bold text-ink-muted hover:text-ink-dark">✕</button>
       </div>
+      <img id="modalImage" src="" alt="" class="mt-4 h-44 w-full rounded-2xl object-cover bg-sand-mint" />
       <p id="modalDesc" class="mt-4 text-sm leading-relaxed text-ink-muted"></p>
       <div class="mt-6 grid gap-5 sm:grid-cols-2">
         <div>
@@ -756,6 +778,11 @@
           <input id="adminPhoneInput" placeholder="Phone Number" class="rounded-lg border border-slate-300 px-3 py-2 text-xs" />
           <button onclick="saveAdminDemoSettings()" class="rounded-lg bg-emeraldBrand px-4 py-2 text-xs font-bold text-white">Apply to Live Demo</button>
         </div>
+        <div class="mt-4 border-t border-slate-100 pt-3 flex flex-wrap items-center gap-3">
+          <label class="text-xs font-semibold text-forest">Custom Hero Earth Photo (Optional):</label>
+          <input id="customEarthUpload" type="file" accept="image/*" class="text-xs" />
+          <button onclick="resetCustomEarth()" class="text-xs font-semibold text-emeraldBrand hover:underline">Reset to NASA 3D Earth</button>
+        </div>
       </div>
 
       <div class="mt-6">
@@ -770,7 +797,6 @@
 
   <!-- SCRIPTS -->
   <script>
-    // Mobile Menu
     function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
     document.getElementById('mobileMenuBtn').addEventListener('click', toggleMobileMenu);
 
@@ -793,203 +819,251 @@
     })();
 
     // =========================================================================
-    // REAL PHOTOREALISTIC 3D EARTH WITH SATELLITE MAPS, CLOUDS, ATMOSPHERE & SOLAR PANELS
+    // PHOTOREALISTIC NASA SATELLITE 3D EARTH (+ optional ./earth.png)
     // =========================================================================
-    (function initRealEarth3D() {
+    function showCustomEarthPhoto(src) {
+      const container = document.getElementById('heroEarthContainer');
+      container.innerHTML = `
+        <div class="flex h-full w-full items-center justify-center p-2">
+          <img src="${src}" alt="Earth powered by solar panels" class="earth-photo-motion max-h-full w-auto rounded-full object-contain drop-shadow-[0_28px_50px_rgba(7,30,29,0.22)]" />
+        </div>`;
+    }
+
+    (function bootHeroEarth() {
+      const savedDataUrl = localStorage.getItem('surya_custom_earth_photo');
+      if (savedDataUrl) { showCustomEarthPhoto(savedDataUrl); return; }
+
+      const probe = new Image();
+      probe.onload = () => showCustomEarthPhoto('./earth.png');
+      probe.onerror = () => initRealisticNasaEarth();
+      probe.src = './earth.png';
+    })();
+
+    function initRealisticNasaEarth() {
       const container = document.getElementById('heroEarthContainer');
       const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      function renderSvgFallback() {
-        container.innerHTML = `
-          <div class="flex h-full w-full items-center justify-center">
-            <svg viewBox="0 0 320 320" class="h-full max-h-[430px] w-auto drop-shadow-2xl">
-              <circle cx="160" cy="160" r="132" fill="#0d4f8b" stroke="#34d399" stroke-width="2" />
-              <path d="M105 90 Q170 75 215 110 Q235 155 200 195 Q160 215 130 180 Z" fill="#4f8f45"/>
-              <g transform="translate(145,115) rotate(-10)">
-                <rect width="48" height="34" rx="3" fill="#0f294a" stroke="#e2e8f0" stroke-width="2.5"/>
-              </g>
-            </svg>
-          </div>`;
+      if (reduced || typeof THREE === 'undefined') {
+        container.innerHTML = `<div class="flex h-full items-center justify-center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/600px-The_Earth_seen_from_Apollo_17.jpg" alt="Real Earth from space" class="h-96 w-96 rounded-full object-cover shadow-2xl" /></div>`;
+        return;
       }
-
-      if (reduced || typeof THREE === 'undefined') { renderSvgFallback(); return; }
 
       let renderer;
       try {
         renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
-      } catch {
-        renderSvgFallback();
-        return;
-      }
+      } catch { return; }
 
-      const w = container.clientWidth || 540;
-      const h = container.clientHeight || 540;
+      const w = container.clientWidth || 580, h = container.clientHeight || 580;
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       renderer.setSize(w, h);
+      if (THREE.ACESFilmicToneMapping) {
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.15;
+      }
+      container.innerHTML = '';
       container.appendChild(renderer.domElement);
 
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(38, w / h, 0.1, 100);
-      camera.position.set(0, 0.15, 6.2);
+      const camera = new THREE.PerspectiveCamera(35, w / h, 0.1, 100);
+      camera.position.set(0, 0.1, 6.2);
 
-      // Realistic sunlight & cool skylight bounce
-      scene.add(new THREE.AmbientLight(0xdbeafe, 0.72));
-      const sunLight = new THREE.DirectionalLight(0xfffbeb, 1.85);
-      sunLight.position.set(-5, 3.2, 5.5);
+      // Photographic Space Lighting: Strong sunlit hemisphere + subtle Earthshine ambient
+      scene.add(new THREE.AmbientLight(0xdbeafe, 0.45));
+      const sunLight = new THREE.DirectionalLight(0xfffdf5, 2.25);
+      sunLight.position.set(-5.5, 3.2, 5.2);
       scene.add(sunLight);
-      const fillLight = new THREE.DirectionalLight(0x99f6e4, 0.45);
-      fillLight.position.set(5, -2.5, -3);
-      scene.add(fillLight);
+      const bounceLight = new THREE.DirectionalLight(0x60a5fa, 0.35);
+      bounceLight.position.set(5, -2.5, -3);
+      scene.add(bounceLight);
 
       const earthGroup = new THREE.Group();
-      // Tilt Earth naturally (~23.4 deg) & orient India/Asia facing front initially
-      earthGroup.rotation.z = 0.15;
-      earthGroup.rotation.x = 0.22;
-      earthGroup.rotation.y = -2.25;
+      earthGroup.rotation.z = 0.20;  // Real axial tilt (~23.4 deg)
+      earthGroup.rotation.x = 0.24;
+      earthGroup.rotation.y = -2.25; // Start showing India / Asia / Indian Ocean
       scene.add(earthGroup);
 
-      const R = 2.08;
+      const R = 2.22;
+      const maxAniso = renderer.capabilities.getMaxAnisotropy ? renderer.capabilities.getMaxAnisotropy() : 4;
       const loader = new THREE.TextureLoader();
       loader.setCrossOrigin('anonymous');
 
-      const CDN_BASE = 'https://cdn.jsdelivr.net/gh/mrdoob/three.js@r147/examples/textures/planets/';
-      const GH_BASE  = 'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/';
+      const SOURCES = [
+        'https://cdn.jsdelivr.net/gh/mrdoob/three.js@r160/examples/textures/planets/',
+        'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/',
+        'https://threejs.org/examples/textures/planets/'
+      ];
 
-      function loadPlanetTex(filename, onLoaded) {
-        return loader.load(
-          CDN_BASE + filename,
-          tex => { if (THREE.sRGBEncoding && filename.includes('atmos')) tex.encoding = THREE.sRGBEncoding; if (onLoaded) onLoaded(tex); },
-          undefined,
-          () => loader.load(GH_BASE + filename, tex => { if (THREE.sRGBEncoding && filename.includes('atmos')) tex.encoding = THREE.sRGBEncoding; if (onLoaded) onLoaded(tex); })
-        );
+      function loadPlanetTexture(filename, isColor) {
+        const tex = new THREE.Texture();
+        let idx = 0;
+        function tryNext() {
+          if (idx >= SOURCES.length) return;
+          const img = new Image();
+          img.crossOrigin = 'anonymous';
+          img.onload = () => {
+            tex.image = img;
+            tex.anisotropy = maxAniso;
+            if (isColor && THREE.sRGBEncoding) tex.encoding = THREE.sRGBEncoding;
+            tex.needsUpdate = true;
+          };
+          img.onerror = () => { idx++; tryNext(); };
+          img.src = SOURCES[idx] + filename;
+        }
+        tryNext();
+        return tex;
       }
 
-      // 1. Real Satellite Surface + Normal Relief + Ocean Specular
-      const dayMap = loadPlanetTex('earth_atmos_2048.jpg');
-      const normalMap = loadPlanetTex('earth_normal_2048.jpg');
-      const specularMap = loadPlanetTex('earth_specular_2048.jpg');
-
-      const earthMat = new THREE.MeshPhongMaterial({
-        map: dayMap,
-        normalMap: normalMap,
-        normalScale: new THREE.Vector2(0.85, 0.85),
-        specularMap: specularMap,
-        specular: new THREE.Color(0x38bdf8),
-        shininess: 22
-      });
-      const earthMesh = new THREE.Mesh(new THREE.SphereGeometry(R, 72, 72), earthMat);
+      // 1. Real NASA Blue Marble Satellite Surface + Topographic Normal Relief + Ocean Specular
+      const earthMesh = new THREE.Mesh(
+        new THREE.SphereGeometry(R, 128, 128),
+        new THREE.MeshPhongMaterial({
+          map: loadPlanetTexture('earth_atmos_2048.jpg', true),
+          normalMap: loadPlanetTexture('earth_normal_2048.jpg', false),
+          normalScale: new THREE.Vector2(1.1, 1.1),
+          specularMap: loadPlanetTexture('earth_specular_2048.jpg', false),
+          specular: new THREE.Color(0x6bb6ff),
+          shininess: 26
+        })
+      );
       earthGroup.add(earthMesh);
 
-      // 2. Real Drifting Volumetric Cloud Sphere
-      const cloudMap = loadPlanetTex('earth_clouds_1024.png');
+      // 2. Real Satellite Cloud Layer rotating slightly faster for natural depth
       const cloudMesh = new THREE.Mesh(
-        new THREE.SphereGeometry(R * 1.016, 64, 64),
+        new THREE.SphereGeometry(R * 1.012, 96, 96),
         new THREE.MeshPhongMaterial({
-          map: cloudMap,
+          map: loadPlanetTexture('earth_clouds_1024.png', true),
           transparent: true,
-          opacity: 0.42,
+          opacity: 0.72,
           depthWrite: false
         })
       );
       earthGroup.add(cloudMesh);
 
-      // 3. Custom GLSL Atmospheric Fresnel Rim Glow
-      const atmosShader = new THREE.ShaderMaterial({
+      // 3. Physically-inspired Rayleigh Atmosphere Rim Glow Shader
+      const atmosMat = new THREE.ShaderMaterial({
         transparent: true,
         side: THREE.BackSide,
         blending: THREE.AdditiveBlending,
+        depthWrite: false,
         vertexShader: `
           varying vec3 vNormal;
+          varying vec3 vWorldPos;
           void main() {
             vNormal = normalize(normalMatrix * normal);
-            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+            vec4 worldPos = modelMatrix * vec4(position, 1.0);
+            vWorldPos = worldPos.xyz;
+            gl_Position = projectionMatrix * viewMatrix * worldPos;
           }
         `,
         fragmentShader: `
           varying vec3 vNormal;
+          varying vec3 vWorldPos;
           void main() {
-            float intensity = pow(0.68 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 3.2);
-            gl_FragColor = vec4(0.22, 0.78, 0.92, 1.0) * intensity * 0.95;
+            float rim = pow(0.68 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 3.4);
+            vec3 sunDir = normalize(vec3(-5.5, 3.2, 5.2));
+            float sunSide = clamp(dot(normalize(vWorldPos), sunDir) * 0.5 + 0.65, 0.15, 1.0);
+            gl_FragColor = vec4(0.28, 0.68, 0.98, 1.0) * rim * sunSide * 1.15;
           }
         `
       });
-      earthGroup.add(new THREE.Mesh(new THREE.SphereGeometry(R * 1.11, 64, 64), atmosShader));
+      earthGroup.add(new THREE.Mesh(new THREE.SphereGeometry(R * 1.075, 64, 64), atmosMat));
 
-      // 4. Detailed 3D Photovoltaic Solar Arrays Mounted on Real Continents
+      // 4. High-Detail Realistic Silicon Photovoltaic Solar Arrays Flush on Landmasses
       const pCanvas = document.createElement('canvas');
-      pCanvas.width = 256; pCanvas.height = 192;
+      pCanvas.width = 512; pCanvas.height = 384;
       const pctx = pCanvas.getContext('2d');
-      const pGrad = pctx.createLinearGradient(0, 0, 256, 192);
-      pGrad.addColorStop(0, '#0a2242'); pGrad.addColorStop(0.5, '#1b4278'); pGrad.addColorStop(1, '#0c294f');
-      pctx.fillStyle = pGrad; pctx.fillRect(0, 0, 256, 192);
-      pctx.strokeStyle = '#e2e8f0'; pctx.lineWidth = 10; pctx.strokeRect(5, 5, 246, 182);
-      pctx.strokeStyle = 'rgba(186, 230, 253, 0.65)'; pctx.lineWidth = 1.5;
-      for (let x = 32; x < 246; x += 32) { pctx.beginPath(); pctx.moveTo(x, 10); pctx.lineTo(x, 182); pctx.stroke(); }
-      for (let y = 32; y < 182; y += 32) { pctx.beginPath(); pctx.moveTo(10, y); pctx.lineTo(246, y); pctx.stroke(); }
+      const pGrad = pctx.createLinearGradient(0, 0, 512, 384);
+      pGrad.addColorStop(0, '#091a36');
+      pGrad.addColorStop(0.5, '#132f5e');
+      pGrad.addColorStop(1, '#081833');
+      pctx.fillStyle = pGrad;
+      pctx.fillRect(0, 0, 512, 384);
+
+      // Crisp anodized aluminium frame
+      pctx.strokeStyle = '#cbd5e1';
+      pctx.lineWidth = 14;
+      pctx.strokeRect(7, 7, 498, 370);
+
+      // Individual monocrystalline wafer gaps & subtle silver busbars
+      const cols = 6, rows = 4;
+      const cw = 484 / cols, ch = 356 / rows;
+      for (let i = 0; i < cols; i++) {
+        for (let j = 0; j < rows; j++) {
+          const x = 14 + i * cw, y = 14 + j * ch;
+          pctx.strokeStyle = 'rgba(226, 232, 240, 0.65)';
+          pctx.lineWidth = 2;
+          pctx.strokeRect(x + 1, y + 1, cw - 2, ch - 2);
+          // Fine silver busbars
+          pctx.strokeStyle = 'rgba(148, 163, 184, 0.35)';
+          pctx.lineWidth = 1;
+          pctx.beginPath();
+          pctx.moveTo(x + cw * 0.33, y + 2); pctx.lineTo(x + cw * 0.33, y + ch - 2);
+          pctx.moveTo(x + cw * 0.66, y + 2); pctx.lineTo(x + cw * 0.66, y + ch - 2);
+          pctx.stroke();
+        }
+      }
       const panelTex = new THREE.CanvasTexture(pCanvas);
+      panelTex.anisotropy = maxAniso;
       if (THREE.sRGBEncoding) panelTex.encoding = THREE.sRGBEncoding;
 
-      const panelMat = new THREE.MeshStandardMaterial({ map: panelTex, roughness: 0.22, metalness: 0.55 });
-      const mountMat = new THREE.MeshStandardMaterial({ color: 0xe2e8f0, metalness: 0.75, roughness: 0.25 });
-      const panelGeo = new THREE.BoxGeometry(1, 0.032, 0.72);
-      const pedGeo = new THREE.CylinderGeometry(0.022, 0.032, 0.14, 8);
+      const panelMat = new THREE.MeshPhongMaterial({
+        map: panelTex,
+        specular: new THREE.Color(0x93c5fd),
+        shininess: 95
+      });
+      const frameMat = new THREE.MeshStandardMaterial({ color: 0x94a3b8, metalness: 0.85, roughness: 0.25 });
+      const moduleGeo = new THREE.BoxGeometry(0.32, 0.012, 0.24);
+      const railGeo = new THREE.BoxGeometry(0.68, 0.014, 0.02);
 
-      // Exact Lat/Lon coordinates matching Three.js SphereGeometry UV mapping
-      const solarSites = [
-        [29.58, 74.33, 0.42], // Hanumangarh, Rajasthan, India!
-        [22.5, 78.5, 0.36],   // Central India
-        [14.5, 76.5, 0.34],   // Southern India
-        [25.0, 45.0, 0.36],   // Arabian Peninsula
-        [36.0, 104.0, 0.35],  // China
-        [49.0, 12.0, 0.32],   // Europe
-        [24.0, 15.0, 0.38],   // North Africa
-        [-22.0, 22.0, 0.34],  // Southern Africa
-        [37.0, -100.0, 0.38], // North America
-        [-14.0, -52.0, 0.36], // South America
-        [-25.0, 134.0, 0.36]  // Australia
-      ];
-
-      solarSites.forEach(([lat, lon, scale]) => {
+      function latLonToVec(lat, lon, r) {
         const phi = (90 - lat) * (Math.PI / 180);
         const theta = (lon + 180) * (Math.PI / 180);
-        const r = R + 0.055;
-        const pos = new THREE.Vector3(
+        return new THREE.Vector3(
           -r * Math.sin(phi) * Math.cos(theta),
            r * Math.cos(phi),
            r * Math.sin(phi) * Math.sin(theta)
         );
-        const rig = new THREE.Group();
-        rig.position.copy(pos);
-        rig.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), pos.clone().normalize());
+      }
 
-        const ped = new THREE.Mesh(pedGeo, mountMat);
-        ped.position.y = -0.02;
-        rig.add(ped);
+      // Clean solar farm clusters anchored directly onto major sunny landmass regions
+      const solarFarmCoords = [
+        [29.58, 74.33, 0.95], // Hanumangarh / Thar Desert, India
+        [22.5, 78.5, 0.85],   // Central India
+        [25.0, 45.0, 0.90],   // Arabian Peninsula
+        [37.0, 102.0, 0.85],  // Gobi / Northwest China
+        [40.0, -4.0, 0.80],   // Spain / Southern Europe
+        [24.0, 14.0, 0.95],   // North Africa
+        [-23.0, 19.0, 0.85],  // Southern Africa
+        [36.0, -112.0, 0.90], // US Southwest
+        [-22.0, -68.0, 0.88], // Atacama / South America
+        [-24.0, 134.0, 0.90]  // Australian Outback
+      ];
 
-        const p = new THREE.Mesh(panelGeo, panelMat);
-        p.scale.setScalar(scale);
-        p.rotation.x = 0.25;
-        p.position.y = 0.055;
-        rig.add(p);
-        earthGroup.add(rig);
+      solarFarmCoords.forEach(([lat, lon, scale]) => {
+        const pos = latLonToVec(lat, lon, R + 0.022);
+        const farm = new THREE.Group();
+        farm.position.copy(pos);
+        farm.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), pos.clone().normalize());
+        farm.scale.setScalar(scale);
+
+        // Sleek twin-row solar farm (4 panels) flush to the Earth's curvature
+        const rail1 = new THREE.Mesh(railGeo, frameMat); rail1.position.set(0, -0.005, -0.14); farm.add(rail1);
+        const rail2 = new THREE.Mesh(railGeo, frameMat); rail2.position.set(0, -0.005,  0.14); farm.add(rail2);
+
+        [[-0.17, -0.14], [0.17, -0.14], [-0.17, 0.14], [0.17, 0.14]].forEach(([ox, oz]) => {
+          const m = new THREE.Mesh(moduleGeo, panelMat);
+          m.position.set(ox, 0.01, oz);
+          m.rotation.x = 0.18;
+          farm.add(m);
+        });
+        earthGroup.add(farm);
       });
 
-      // Subtle clean-energy orbital ring
-      const orbitRing = new THREE.Mesh(
-        new THREE.TorusGeometry(2.68, 0.007, 12, 128),
-        new THREE.MeshBasicMaterial({ color: 0x059669, transparent: true, opacity: 0.35 })
-      );
-      orbitRing.rotation.x = Math.PI / 2.25;
-      orbitRing.rotation.y = 0.22;
-      scene.add(orbitRing);
-
-      // Drag-to-spin + gentle auto-rotation + intersection pause
+      // Drag-to-spin + gentle natural Earth rotation
       let dragging = false, prevX = 0, prevY = 0, visible = true;
-      const domEl = renderer.domElement;
-      domEl.addEventListener('pointerdown', e => { dragging = true; prevX = e.clientX; prevY = e.clientY; });
+      renderer.domElement.addEventListener('pointerdown', e => { dragging = true; prevX = e.clientX; prevY = e.clientY; });
       window.addEventListener('pointermove', e => {
         if (!dragging) return;
-        earthGroup.rotation.y += (e.clientX - prevX) * 0.0075;
+        earthGroup.rotation.y += (e.clientX - prevX) * 0.0065;
         earthGroup.rotation.x = Math.max(-0.7, Math.min(0.7, earthGroup.rotation.x + (e.clientY - prevY) * 0.004));
         prevX = e.clientX; prevY = e.clientY;
       });
@@ -1007,14 +1081,11 @@
       (function animate() {
         requestAnimationFrame(animate);
         if (!visible) return;
-        if (!dragging) {
-          earthGroup.rotation.y += 0.0018;
-        }
-        cloudMesh.rotation.y += 0.0006; // Clouds drift independently over land & sea
-        orbitRing.rotation.z += 0.0012;
+        if (!dragging) earthGroup.rotation.y += 0.0014;
+        cloudMesh.rotation.y += 0.0005;
         renderer.render(scene, camera);
       })();
-    })();
+    }
 
     // =========================================================================
     // INTERACTIVE 3D SOLAR MODULE INSPECTOR
@@ -1092,15 +1163,15 @@
     })();
 
     // =========================================================================
-    // SERVICES CATALOGUE + MODAL
+    // SERVICES CATALOGUE WITH PICTURES + 3D FLIP CARDS + MODAL
     // =========================================================================
     const SERVICES = [
-      { id: 'res', category: 'residential', title: 'Home Rooftop Solar Installation', short: 'Grid-tied, hybrid & off-grid systems engineered for Hanumangarh homes with JdVVNL net-metering.', desc: 'Complete residential solar engineering—shading analysis, structural mounting, inverter integration, earthing, lightning protection, and JdVVNL net metering.', apps: ['Independent homes & bungalows', 'Residential builder floors', 'Group Housing Societies'], benefits: ['Electricity bill reduction potential', 'PM Surya Ghar subsidy eligibility support', 'Built for Rajasthan heat & dust'], configs: '2 kW, 3 kW, 5 kW, 10 kW', reqs: 'Valid residential JdVVNL connection, unshaded roof, DCR modules for subsidy' },
-      { id: 'sub', category: 'residential', title: 'PM Surya Ghar Subsidy Assistance', short: 'Guided documentation and National Portal workflow support for eligible residential rooftops up to ₹78,000.', desc: 'End-to-end assistance on pmsuryaghar.gov.in, feasibility, DCR module installation, DISCOM inspection, and DBT subsidy tracking.', apps: ['Eligible grid-connected residential households'], benefits: ['1 kW: ₹30,000 | 2 kW: ₹60,000 | 3 kW+: ₹78,000 max', 'Transparent JdVVNL coordination'], configs: '1 kW – 3 kW+ residential systems', reqs: 'Residential connection; no prior rooftop solar subsidy availed' },
-      { id: 'com', category: 'commercial', title: 'Commercial Rooftop & EPC', short: 'High-yield solar systems for shops, showrooms, hotels, schools, hospitals, offices, and warehouses.', desc: 'Tailored to daytime commercial peak loads including consumption analysis, string inverter sizing, net metering, and remote monitoring.', apps: ['Showrooms & retail plazas', 'Hospitals, clinics & schools', 'Hotels & cold storages'], benefits: ['Control daytime operating energy expenses', 'Remote generation monitoring'], configs: '10 kW, 25 kW, 50 kW, 100 kW+', reqs: 'Commercial connection & sanctioned load review' },
-      { id: 'ind', category: 'industrial', title: 'Industrial Solar Plants & EPC', short: 'Large-capacity rooftop and ground-mounted captive solar plants for factories and agro-mills.', desc: 'Turnkey industrial EPC covering energy audits, wind-load structural design, HT/LT synchronization, monitoring, and Annual Maintenance Contracts.', apps: ['Cotton, rice & dal mills', 'Manufacturing factories', 'Large warehouses'], benefits: ['Predictable long-term energy management', 'Industrial AC/DC protection compliance'], configs: '100 kW, 250 kW, 500 kW, 1 MW+', reqs: 'Sanctioned contract demand & roof truss load check' },
-      { id: 'agr', category: 'agricultural', title: 'Solar Water Pumps & Irrigation', short: 'Reliable DC/AC solar pumping systems and controllers designed for Rajasthan agriculture.', desc: 'Daytime solar irrigation pumping solutions replacing diesel generators across Hanumangarh farms, plus PM-KUSUM guidance where applicable.', apps: ['Borewell & open-well irrigation', 'Drip & sprinkler systems'], benefits: ['Eliminates recurring diesel fuel costs', 'Daytime pumping independence'], configs: '3 HP, 5 HP, 7.5 HP, 10 HP', reqs: 'Water table depth assessment & scheme eligibility verification' },
-      { id: 'om', category: 'general', title: 'Solar Maintenance & AMC', short: 'Preventive inspection, inverter diagnostics, string checks, and cleaning plans for peak yield.', desc: 'Scheduled dust mitigation, thermal/IV checks, earthing verification, and inverter fault diagnostics suited to northern Rajasthan conditions.', apps: ['Residential, commercial, industrial & farm plants'], benefits: ['Protects generation yield', 'Early fault detection'], configs: 'Quarterly / Bi-annual AMC plans', reqs: 'Baseline plant inspection' }
+      { id: 'res', category: 'residential', title: 'Home Rooftop Solar Installation', image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80', short: 'Grid-tied, hybrid & off-grid systems engineered for Hanumangarh homes with JdVVNL net-metering.', desc: 'Complete residential solar engineering—shading analysis, structural mounting, inverter integration, earthing, lightning protection, and JdVVNL net metering.', apps: ['Independent homes & bungalows', 'Residential builder floors', 'Group Housing Societies'], benefits: ['Electricity bill reduction potential', 'PM Surya Ghar subsidy eligibility support', 'Built for Rajasthan heat & dust'], configs: '2 kW, 3 kW, 5 kW, 10 kW', reqs: 'Valid residential JdVVNL connection, unshaded roof, DCR modules for subsidy' },
+      { id: 'sub', category: 'residential', title: 'PM Surya Ghar Subsidy Assistance', image: 'https://images.unsplash.com/photo-1617269778723-73a40cf299bd?auto=format&fit=crop&w=900&q=80', short: 'Guided documentation and National Portal workflow support for eligible residential rooftops up to ₹78,000.', desc: 'End-to-end assistance on pmsuryaghar.gov.in, feasibility, DCR module installation, DISCOM inspection, and DBT subsidy tracking.', apps: ['Eligible grid-connected residential households'], benefits: ['1 kW: ₹30,000 | 2 kW: ₹60,000 | 3 kW+: ₹78,000 max', 'Transparent JdVVNL coordination'], configs: '1 kW – 3 kW+ residential systems', reqs: 'Residential connection; no prior rooftop solar subsidy availed' },
+      { id: 'com', category: 'commercial', title: 'Commercial Rooftop & EPC', image: 'https://images.unsplash.com/photo-1594818379496-da1e345b0ded?auto=format&fit=crop&w=900&q=80', short: 'High-yield solar systems for shops, showrooms, hotels, schools, hospitals, offices, and warehouses.', desc: 'Tailored to daytime commercial peak loads including consumption analysis, string inverter sizing, net metering, and remote monitoring.', apps: ['Showrooms & retail plazas', 'Hospitals, clinics & schools', 'Hotels & cold storages'], benefits: ['Control daytime operating energy expenses', 'Remote generation monitoring'], configs: '10 kW, 25 kW, 50 kW, 100 kW+', reqs: 'Commercial connection & sanctioned load review' },
+      { id: 'ind', category: 'industrial', title: 'Industrial Solar Plants & EPC', image: 'https://images.unsplash.com/photo-1509389928833-fe62aef36deb?auto=format&fit=crop&w=900&q=80', short: 'Large-capacity rooftop and ground-mounted captive solar plants for factories and agro-mills.', desc: 'Turnkey industrial EPC covering energy audits, wind-load structural design, HT/LT synchronization, monitoring, and Annual Maintenance Contracts.', apps: ['Cotton, rice & dal mills', 'Manufacturing factories', 'Large warehouses'], benefits: ['Predictable long-term energy management', 'Industrial AC/DC protection compliance'], configs: '100 kW, 250 kW, 500 kW, 1 MW+', reqs: 'Sanctioned contract demand & roof truss load check' },
+      { id: 'agr', category: 'agricultural', title: 'Solar Water Pumps & Irrigation', image: 'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?auto=format&fit=crop&w=900&q=80', short: 'Reliable DC/AC solar pumping systems and controllers designed for Rajasthan agriculture.', desc: 'Daytime solar irrigation pumping solutions replacing diesel generators across Hanumangarh farms, plus PM-KUSUM guidance where applicable.', apps: ['Borewell & open-well irrigation', 'Drip & sprinkler systems'], benefits: ['Eliminates recurring diesel fuel costs', 'Daytime pumping independence'], configs: '3 HP, 5 HP, 7.5 HP, 10 HP', reqs: 'Water table depth assessment & scheme eligibility verification' },
+      { id: 'om', category: 'general', title: 'Solar Maintenance & AMC', image: 'https://images.unsplash.com/photo-1660330589257-813305a4a383?auto=format&fit=crop&w=900&q=80', short: 'Preventive inspection, inverter diagnostics, string checks, and cleaning plans for peak yield.', desc: 'Scheduled dust mitigation, thermal/IV checks, earthing verification, and inverter fault diagnostics suited to northern Rajasthan conditions.', apps: ['Residential, commercial, industrial & farm plants'], benefits: ['Protects generation yield', 'Early fault detection'], configs: 'Quarterly / Bi-annual AMC plans', reqs: 'Baseline plant inspection' }
     ];
 
     let svcFilter = 'all';
@@ -1112,13 +1183,51 @@
 
       const list = SERVICES.filter(s => svcFilter === 'all' || s.category === svcFilter);
       document.getElementById('servicesGrid').innerHTML = list.map(s => `
-        <div class="group flex flex-col justify-between rounded-2xl border border-emerald-900/10 bg-sand p-6 transition hover:-translate-y-1 hover:border-emeraldBrand/40 hover:bg-white hover:shadow-card">
-          <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-emeraldBrand">${s.category}</span>
-            <h3 class="mt-1 font-display text-xl font-bold text-ink-dark">${s.title}</h3>
-            <p class="mt-2.5 text-sm leading-relaxed text-ink-muted">${s.short}</p>
+        <div class="flip-card group cursor-pointer" onclick="this.classList.toggle('is-flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front flex flex-col overflow-hidden rounded-3xl border border-emerald-900/10 bg-sand shadow-card">
+              <div class="relative h-48 w-full overflow-hidden bg-gradient-to-br from-emerald-900 to-forest">
+                <img src="${s.image}" alt="${s.title}" loading="lazy" onerror="this.style.display='none'" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-forest/70 via-transparent to-black/20"></div>
+                <span class="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-emeraldBrand-dark shadow-sm">${s.category}</span>
+                <span class="absolute right-4 top-4 rounded-full bg-forest/80 px-2.5 py-1 text-[10px] font-semibold text-amberBrand-light backdrop-blur-sm">Flip ↻</span>
+              </div>
+              <div class="flex flex-1 flex-col justify-between p-5">
+                <div>
+                  <h3 class="font-display text-lg font-bold text-ink-dark">${s.title}</h3>
+                  <p class="mt-2 line-clamp-3 text-xs leading-relaxed text-ink-muted">${s.short}</p>
+                </div>
+                <div class="mt-3 flex items-center justify-between border-t border-emerald-900/10 pt-3 text-xs font-bold text-emeraldBrand-dark">
+                  <span>Configs: ${s.configs.split(',')[0]}+</span>
+                  <span class="text-amberBrand-deep">Hover / Tap to Flip →</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card-back flex flex-col justify-between rounded-3xl border border-emerald-400/20 bg-forest p-6 text-white shadow-2xl">
+              <div>
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-amberBrand-light">${s.category} engineering</span>
+                  <span class="text-[10px] text-ink-lightMuted">Tap to Flip Back ↻</span>
+                </div>
+                <h3 class="mt-1.5 font-display text-xl font-bold text-white">${s.title}</h3>
+                <div class="mt-4">
+                  <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-300">Key Highlights</p>
+                  <ul class="mt-2 space-y-1.5 text-xs text-ink-lightMuted">
+                    ${s.benefits.map(b => `<li class="flex items-start gap-2"><span class="text-amberBrand">✓</span><span>${b}</span></li>`).join('')}
+                  </ul>
+                </div>
+                <div class="mt-4 rounded-xl bg-forest-deep p-3 text-xs">
+                  <span class="font-bold text-amberBrand-light">Typical Sizes:</span>
+                  <span class="text-ink-lightMuted"> ${s.configs}</span>
+                </div>
+              </div>
+              <div class="mt-4 flex gap-2.5">
+                <button type="button" onclick="event.stopPropagation(); openServiceModal('${s.id}')" class="flex-1 rounded-full border border-white/25 bg-white/10 py-2.5 text-xs font-bold text-white transition hover:bg-white/20">Full Specs</button>
+                <a href="#contact" onclick="event.stopPropagation(); prefillService('${s.title}')" class="flex-1 rounded-full bg-amberBrand py-2.5 text-center text-xs font-bold text-forest transition hover:bg-amberBrand-light">Get Quote →</a>
+              </div>
+            </div>
           </div>
-          <button onclick="openServiceModal('${s.id}')" class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-emeraldBrand-dark group-hover:text-amberBrand-deep">Learn More →</button>
         </div>
       `).join('');
     }
@@ -1130,6 +1239,9 @@
       if (!s) return;
       document.getElementById('modalCategory').textContent = s.category + ' solar';
       document.getElementById('modalTitle').textContent = s.title;
+      const mImg = document.getElementById('modalImage');
+      mImg.src = s.image; mImg.alt = s.title; mImg.style.display = 'block';
+      mImg.onerror = () => { mImg.style.display = 'none'; };
       document.getElementById('modalDesc').textContent = s.desc;
       document.getElementById('modalApps').innerHTML = s.apps.map(a => `<li>✓ ${a}</li>`).join('');
       document.getElementById('modalBenefits').innerHTML = s.benefits.map(b => `<li>✓ ${b}</li>`).join('');
@@ -1246,7 +1358,7 @@
     [cBill, cUnits, cTariff, cArea, cCat, cSys].forEach((el, idx) => el.addEventListener(idx < 4 ? 'input' : 'change', () => updateCalc(idx === 0 ? 'bill' : idx === 1 ? 'units' : 'other')));
     updateCalc('bill');
 
-    // FORMS + DEMO ADMIN STORAGE
+    // FORMS + DEMO ADMIN + CUSTOM EARTH UPLOAD
     window.prefillService = function(title) { document.getElementById('contactServiceInput').value = title; };
     function getStoredEnquiries() { try { return JSON.parse(localStorage.getItem('surya_demo_enquiries') || '[]'); } catch { return []; } }
     function saveDemoEnquiry(entry) {
@@ -1274,6 +1386,23 @@
       msg.classList.remove('hidden');
       e.target.reset();
     });
+
+    document.getElementById('customEarthUpload').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = ev => {
+        localStorage.setItem('surya_custom_earth_photo', ev.target.result);
+        showCustomEarthPhoto(ev.target.result);
+        closeAdminModal();
+      };
+      reader.readAsDataURL(file);
+    });
+    window.resetCustomEarth = function() {
+      localStorage.removeItem('surya_custom_earth_photo');
+      initRealisticNasaEarth();
+      closeAdminModal();
+    };
 
     window.openAdminModal = function() {
       const list = getStoredEnquiries();
